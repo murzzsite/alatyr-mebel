@@ -30,6 +30,7 @@ section{position:relative}
 .header__inner{display:flex;align-items:center;gap:24px;min-width:0;padding:14px var(--pad)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .logo__stone{width:26px;height:26px;color:var(--amber)}
+.logo__mark{width:44px;height:44px;display:block;border-radius:50%}
 .logo__name{font-weight:800;font-size:22px;letter-spacing:-.03em}
 .logo__sub{font-size:14px;color:var(--mute)}
 .nav{display:flex;gap:28px;margin-left:auto}
@@ -177,6 +178,7 @@ details p{padding:0 28px 26px;max-width:40em}
 
 /* подвал */
 .footer{padding:clamp(40px,6vw,90px) var(--pad) 28px;background:var(--field)}
+.footer__mark{width:96px;height:96px;display:block;margin-bottom:clamp(16px,2.5vw,28px);border-radius:50%}
 .footer__name{font-size:clamp(80px,22vw,380px);font-weight:800;letter-spacing:-.06em;line-height:.85;margin-left:-.04em}
 .footer__row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:clamp(24px,4vw,56px);font-size:15px}
 .footer__row a{text-underline-offset:4px}
@@ -225,7 +227,7 @@ details p{padding:0 28px 26px;max-width:40em}
   .steps li{grid-template-columns:56px minmax(0,1fr);gap:4px 14px}
   .steps li::before{width:52px;height:52px;font-size:22px}
 }
-@media (max-width:380px){.logo__name{font-size:19px}}
+@media (max-width:380px){.logo__name{font-size:19px}.logo__mark{width:38px;height:38px}}
 @media (prefers-reduced-motion:reduce){
   *{transition-duration:.01ms!important;animation-duration:.01ms!important}
   .story__text .w{opacity:1}
