@@ -32,7 +32,7 @@ section{position:relative}
 .logo__stone{width:26px;height:26px;color:var(--amber)}
 .logo__mark{width:44px;height:44px;display:block;border-radius:50%}
 .logo__name{font-weight:800;font-size:22px;letter-spacing:-.03em}
-.logo__sub{font-size:14px;color:var(--mute)}
+.logo__sub{font-size:14px;color:var(--mute);white-space:nowrap}
 .nav{display:flex;gap:28px;margin-left:auto}
 .nav a{text-decoration:none;font-weight:500;font-size:16px;white-space:nowrap}
 .header__cta{min-height:46px;padding:0 22px;font-size:15px}
@@ -187,8 +187,8 @@ details p{padding:0 28px 26px;max-width:40em}
 .ln{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
 .ln i{display:block;font-style:normal}
 
-@media (max-width:1180px){.nav{gap:20px}.nav a{font-size:15px}}
-@media (max-width:1100px){
+@media (max-width:1320px){.nav{gap:20px}.nav a{font-size:15px}}
+@media (max-width:1240px){
   .burger{display:block;margin-left:auto}
   .header__cta{display:none}
   .nav{position:fixed;inset:70px 0 auto 0;margin:0;flex-direction:column;gap:0;background:var(--bg);padding:8px var(--pad) 24px;transform:translateY(-130%);transition:transform .5s var(--ease);z-index:-1}
