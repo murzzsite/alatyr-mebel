@@ -17,6 +17,10 @@ const LEAD_ENDPOINT = 'https://lead-relay.leestygpt.workers.dev/lead/YRAXFVXLL3'
   const setMenu = o => { burger.classList.toggle('is-open', o); nav.classList.toggle('is-open', o); burger.setAttribute('aria-expanded', o); };
   burger.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
   $$('a', nav).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('scroll', () => { if (nav.classList.contains('is-open')) setMenu(false); }, { passive: true });
+  addEventListener('resize', () => { if (innerWidth > 1240) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('click', e => { if (nav.classList.contains('is-open') && !nav.contains(e.target) && !burger.contains(e.target)) setMenu(false); });
 
   /* ---------- чертёж кухни (SVG из кода) ---------- */
   const PAL_NEW = { wall: '#f4f5f1', body: '#e9e6dc', front: '#8a9b86', top: '#3d484e', handle: '#e29a14', stone: '#e29a14', floor: '#c9d1cf', plinth: '#1a2327' };
